@@ -1,0 +1,100 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    border: 0;
+    padding: 0; // border: 1px solid red;
+}
+
+body {
+    font-family: 'ARS Maquette', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+// Clearfix
+@mixin clearfix {
+    &:after {
+        display: table;
+        clear: both;
+        content: '';
+    }
+}
+
+.main {
+    //@include clearfix;
+    margin-top: 48px;
+    height: 300px;
+    width: 100%;
+    background-color: lightyellow;
+}
+
+.cover {
+    @include clearfix;
+    width: 100%;
+    background-color: lightgreen;
+    height: 300px;
+    padding: 4px;
+    .main-article {
+        width: 100%;
+        float: left;
+        height: 33.3%;
+        display: flex;
+        padding: 4px;
+        @media (min-width: 700px) {
+        	height: 100%;
+            width: percentage(8/12);
+        }
+    }
+    .side-article {
+        width: 100%;
+        float: left;
+        height: 33.3%;
+        padding: 4px;
+        @media (min-width: 700px) {
+            width: percentage(4/12);
+            height: 100%;
+            display: flex;
+        	flex-direction:column;
+        }
+    }
+}
+
+.cover-story {
+    width: 100%;
+    height: 100%;
+    //background-color: lightblue;
+}
+.cover-story-up {
+	width: 100%;
+    height: 100%;
+    //background-color: lightblue;
+}
+
+.cover-story-down {
+	width: 100%;
+    height: 100%;
+    //background-color: lightblue;
+    margin-top: 8px;
+}
+
+.image {
+	background-position: center center;
+	background-size: cover;
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2017/08/Xiaomi-Redmi-796x398.jpg");
+}
+
+.image-up {
+	background-position: center center;
+	background-size: cover;
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2017/08/Terminator-3-796x398.jpg");
+}
+
+.image-down {
+	background-position: center center;
+    background-size: cover;
+	background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2017/08/Xbox-One-X-Project-Scorpio-Edition-796x396.jpg");
+}
